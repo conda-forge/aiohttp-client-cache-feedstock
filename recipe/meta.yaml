@@ -1,6 +1,6 @@
 {% set name = "aiohttp-client-cache" %}
-{% set version = "0.3.0" %}
-{% set hash_val = "d6feafb9924cfd40159f80fd4cd5f39794ff6b90f209bca190a5432d64892cab" %}
+{% set version = "0.4.0" %}
+{% set hash_val = "a4737dacb74002e3fbea51682d84786f7ff7004e790f4764e7b5f09504455680" %}
 
 
 package:
@@ -20,9 +20,12 @@ requirements:
   host:
     - python >=3.7
     - pip
+    - poetry
   run:
     - python >=3.7
-    - aiohttp >=3.0
+    - aiohttp[speedups] >=3.0
+    - aiosqlite >=0.16
+    - aioredis >=1.3
     - attrs >=21.2
     - itsdangerous >=1.1
     - python-forge >=18.6
