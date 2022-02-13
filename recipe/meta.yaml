@@ -1,6 +1,6 @@
 {% set name = "aiohttp-client-cache" %}
-{% set version = "0.6.0" %}
-{% set hash_val = "697c5bbda8d9057996183a51d2348f9b276f8ea891ced8f65e62d001f8f31ae2" %}
+{% set version = "0.6.1" %}
+{% set hash_val = "7d727b045de231bf04cee3dab14b268082b8cb820d443211bbeda57ce7e9f362" %}
 
 
 package:
@@ -25,7 +25,7 @@ requirements:
     - python >=3.7
     - aiohttp[speedups] >=3.0
     - aiosqlite >=0.16
-    - aioredis >=1.3
+    - aioredis >=2.0
     - attrs >=21.2
     - itsdangerous >=1.1
     - python-forge >=18.6
