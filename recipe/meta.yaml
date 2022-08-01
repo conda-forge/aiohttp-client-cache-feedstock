@@ -1,6 +1,6 @@
 {% set name = "aiohttp-client-cache" %}
-{% set version = "0.7.2" %}
-{% set hash_val = "92eca66c1006ba2350260f86afba2c4a1178026276e6f20194d6f7754380afb8" %}
+{% set version = "0.7.3" %}
+{% set hash_val = "c9757c91db9eb14765cc976574c69a8587b5597959542263eb83217dadc220a9" %}
 
 
 package:
