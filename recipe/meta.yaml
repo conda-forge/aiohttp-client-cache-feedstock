@@ -1,6 +1,6 @@
 {% set name = "aiohttp-client-cache" %}
-{% set version = "0.7.3" %}
-{% set hash_val = "c9757c91db9eb14765cc976574c69a8587b5597959542263eb83217dadc220a9" %}
+{% set version = "0.8.1" %}
+{% set hash_val = "7307ab8bfefe698a0801ba967a9f56ea9fc689fcfc2f3a21b339eeed0bd4e400" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aiohttp_client_cache-{{ version }}.tar.gz
   sha256: {{ hash_val }}
 
 build:
@@ -23,7 +23,7 @@ requirements:
     - poetry
   run:
     - python >=3.7
-    - aiohttp[speedups] >=3.0
+    - aiohttp[speedups] >=3.8
     - aiosqlite >=0.16
     - aioredis >=2.0
     - attrs >=21.2
