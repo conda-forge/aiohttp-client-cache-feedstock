@@ -50,6 +50,7 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage('aiohttp-client-cache', max_pin="x.x.x") }}
+        - {{ pin_subpackage('aiohttp-client-cache.backends', max_pin="x.x.x") }}
     test:
       imports:
         - aiohttp_client_cache
