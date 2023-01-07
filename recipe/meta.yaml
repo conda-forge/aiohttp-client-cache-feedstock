@@ -1,7 +1,7 @@
 {% set name = "aiohttp-client-cache" %}
+{% set name_under = "aiohttp_client_cache" %}
 {% set version = "0.8.1" %}
 {% set hash_val = "7307ab8bfefe698a0801ba967a9f56ea9fc689fcfc2f3a21b339eeed0bd4e400" %}
-{% set name_under = "aiohttp_client_cache" %}
 
 
 package:
@@ -49,7 +49,7 @@ outputs:
       noarch: python
     requirements:
       run:
-        - {{ pin_subpackage('aiohttp-client-cache, max_pin="x.x.x") }}
+        - {{ pin_subpackage('aiohttp-client-cache', max_pin="x.x.x") }}
     test:
       imports:
         - aiohttp_client_cache
