@@ -1,16 +1,13 @@
 {% set name = "aiohttp-client-cache" %}
-{% set name_under = "aiohttp_client_cache" %}
 {% set version = "0.8.1" %}
-{% set hash_val = "7307ab8bfefe698a0801ba967a9f56ea9fc689fcfc2f3a21b339eeed0bd4e400" %}
-
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name_under }}-{{ version }}.tar.gz
-  sha256: {{ hash_val }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aiohttp_client_cache-{{ version }}.tar.gz
+  sha256: 7307ab8bfefe698a0801ba967a9f56ea9fc689fcfc2f3a21b339eeed0bd4e400
 
 build:
   number: 2
@@ -34,7 +31,6 @@ outputs:
         - itsdangerous >=1.1
         - python-forge >=18.6
         - url-normalize >=1.4
-
     test:
       requires:
         - pip
@@ -44,13 +40,17 @@ outputs:
         - aiohttp_client_cache
         - aiohttp_client_cache.backends
 
-  - name: {{ name_under }}
+  - name: aiohttp_client_cache
     build:
       noarch: python
     requirements:
       run:
         - {{ pin_subpackage(name, exact=True) }}
     test:
+      requires:
+        - pip
+      commands:
+        - pip check
       imports:
         - aiohttp_client_cache
         - aiohttp_client_cache.backends
