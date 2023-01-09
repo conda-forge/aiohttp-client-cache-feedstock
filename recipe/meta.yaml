@@ -1,58 +1,42 @@
 {% set name = "aiohttp-client-cache" %}
-{% set name_under = "aiohttp_client_cache" %}
 {% set version = "0.8.1" %}
-{% set hash_val = "7307ab8bfefe698a0801ba967a9f56ea9fc689fcfc2f3a21b339eeed0bd4e400" %}
-
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name_under }}-{{ version }}.tar.gz
-  sha256: {{ hash_val }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aiohttp_client_cache-{{ version }}.tar.gz
+  sha256: 7307ab8bfefe698a0801ba967a9f56ea9fc689fcfc2f3a21b339eeed0bd4e400
 
 build:
-  number: 1
+  script: python -m pip install . -vv
+  noarch: python
+  number: 2
 
-outputs:
-  - name: {{ name }}
-    build:
-      noarch: python
-    script: build_base.sh
-    requirements:
-      host:
-        - python >=3.7
-        - pip
-        - poetry
-      run:
-        - python >=3.7
-        - aiohttp[speedups] >=3.8
-        - aiosqlite >=0.16
-        - aioredis >=2.0
-        - attrs >=21.2
-        - itsdangerous >=1.1
-        - python-forge >=18.6
-        - url-normalize >=1.4
+requirements:
+  host:
+    - python >=3.7
+    - pip
+    - poetry
+  run:
+    - python >=3.7
+    - aiohttp[speedups] >=3.8
+    - aiosqlite >=0.16
+    - aioredis >=2.0
+    - attrs >=21.2
+    - itsdangerous >=1.1
+    - python-forge >=18.6
+    - url-normalize >=1.4
 
-    test:
-      requires:
-        - pip
-      commands:
-        - pip check
-      imports:
-        - aiohttp_client_cache
-        - aiohttp_client_cache.backends
-
-  - name: {{ name_under }}
-    build:
-      noarch: python
-    requirements:
-      run:
-        - {{ pin_subpackage('aiohttp-client-cache', max_pin="x.x.x") }}
-    test:
-      imports:
-        - aiohttp_client_cache
+test:
+  requires:
+    - pip
+  commands:
+    - pip check
+  imports:
+    - aiohttp_client_cache
+    - aiohttp_client_cache.backends
 
 about:
   home: https://github.com/requests-cache/aiohttp-client-cache
