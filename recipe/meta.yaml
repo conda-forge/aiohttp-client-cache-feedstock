@@ -18,8 +18,8 @@ build:
 outputs:
   - name: {{ name }}
     build:
+      script: python -m pip install . -vv
       noarch: python
-    script: build_base.sh
     requirements:
       host:
         - python >=3.7
@@ -49,10 +49,11 @@ outputs:
       noarch: python
     requirements:
       run:
-        - {{ pin_subpackage('aiohttp-client-cache', max_pin="x.x.x") }}
+        - {{ pin_subpackage(name, exact=True) }}
     test:
       imports:
         - aiohttp_client_cache
+        - aiohttp_client_cache.backends
 
 about:
   home: https://github.com/requests-cache/aiohttp-client-cache
