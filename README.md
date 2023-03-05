@@ -32,7 +32,6 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-aiohttp--client--cache-green.svg)](https://anaconda.org/conda-forge/aiohttp-client-cache) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/aiohttp-client-cache.svg)](https://anaconda.org/conda-forge/aiohttp-client-cache) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/aiohttp-client-cache.svg)](https://anaconda.org/conda-forge/aiohttp-client-cache) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/aiohttp-client-cache.svg)](https://anaconda.org/conda-forge/aiohttp-client-cache) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-aiohttp_client_cache-green.svg)](https://anaconda.org/conda-forge/aiohttp_client_cache) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/aiohttp_client_cache.svg)](https://anaconda.org/conda-forge/aiohttp_client_cache) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/aiohttp_client_cache.svg)](https://anaconda.org/conda-forge/aiohttp_client_cache) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/aiohttp_client_cache.svg)](https://anaconda.org/conda-forge/aiohttp_client_cache) |
 
 Installing aiohttp-client-cache
 ===============================
@@ -44,16 +43,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `aiohttp-client-cache, aiohttp_client_cache` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `aiohttp-client-cache` can be installed with `conda`:
 
 ```
-conda install aiohttp-client-cache aiohttp_client_cache
+conda install aiohttp-client-cache
 ```
 
 or with `mamba`:
 
 ```
-mamba install aiohttp-client-cache aiohttp_client_cache
+mamba install aiohttp-client-cache
 ```
 
 It is possible to list all of the versions of `aiohttp-client-cache` available on your platform with `conda`:
