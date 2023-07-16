@@ -1,11 +1,11 @@
-About aiohttp-client-cache
-==========================
+About aiohttp-client-cache-feedstock
+====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiohttp-client-cache-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/requests-cache/aiohttp-client-cache
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiohttp-client-cache-feedstock/blob/main/LICENSE.txt)
 
 Summary: Persistent cache for aiohttp requests
 
