@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aiohttp_client_cache-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aiohttp_client_cache-{{ version }}.tar.gz
   sha256: e60fe816136b5b1d66f3bb6b272ab81d97854ea1e4d9b57085a360426967d265
 
 build:
   script: python -m pip install . -vv
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - poetry
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - aiohttp >=3.8
     - aiosqlite >=0.16
     - attrs >=21.2
@@ -30,6 +30,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
   imports:
