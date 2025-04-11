@@ -25,7 +25,7 @@ requirements:
     - aiosqlite >=0.16
     - attrs >=21.2
     - itsdangerous >=2.0
-    - url-normalize >=1.4
+    - url-normalize >=2.2
 
 test:
   requires:
