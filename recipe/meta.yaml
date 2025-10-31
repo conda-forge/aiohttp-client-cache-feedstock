@@ -22,7 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - aiohttp >=3.8
-    - aiosqlite >=0.16
+    - aiosqlite >=0.20
     - attrs >=21.2
     - itsdangerous >=2.0
     - url-normalize >=2.2
