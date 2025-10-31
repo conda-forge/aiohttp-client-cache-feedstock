@@ -17,8 +17,8 @@ build:
 requirements:
   host:
     - python {{ python_min }}
+    - hatchling >=1.12
     - pip
-    - poetry
   run:
     - python >={{ python_min }}
     - aiohttp >=3.8
@@ -26,6 +26,7 @@ requirements:
     - attrs >=21.2
     - itsdangerous >=2.0
     - url-normalize >=2.2
+    - typing-extensions >=4
 
 test:
   requires:
