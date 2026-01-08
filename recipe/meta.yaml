@@ -1,5 +1,5 @@
 {% set name = "aiohttp-client-cache" %}
-{% set version = "0.14.2" %}
+{% set version = "0.14.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aiohttp_client_cache-{{ version }}.tar.gz
-  sha256: d3f4b81204de9dce59894d9ecb9c77a8dfd633d73c920bbcf8a7370650656585
+  sha256: 329f4038c6a8ed0b410023980b6d1a2c484af33e667a89ce245c899d62c1fba1
 
 build:
   script: python -m pip install . -vv
